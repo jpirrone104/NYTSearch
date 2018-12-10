@@ -1,0 +1,11 @@
+.jumbotron {
+    height: 30%
+}
+
+#search {
+    margin-right: 5px;
+}
+
+#article {
+    background-color: lightgrey;
+}
