@@ -5,30 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>NYT Times Search</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" /> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="assets/javascript/app.js"></script>
+    <script src="/assets/javascript/app.js"></script>
 </head>
 <body>
+<div class="container">
     <div class="jumbotron bg-primary text-white">
-        <p class="text-center">NY Times Search</p>
+        <h1 class="text-center">NY Times Search</h1>
     </div>
 
     <div class="card">
         <div class="card-header bg-primary text-white">
             Search Parameters
         </div>
+
         <div class="card-body">
-        <form>
-            <div class="row">
+            <form>
                 <div class="form-group">
                     <label for="searchTerm">Search Term:</label>
                     <input type="text" class="form-control" id="searchTerm" aria-describedby="search term" placeholder="Search Term">
                 </div>
-            </div>
 
-            <div class="row">
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Number of Records to Retrieve:</label>
                     <select class="form-control" id="recordNumber">
@@ -39,39 +38,37 @@
                         <option>5</option>
                     </select>
                 </div>
-            </div>
 
-        <div class="row">
-            <div class="form-group">
-                <label for="startYear">Start Year (optional):</label>
-                <input type="text" class="form-control" id="startYear" aria-describedby="startYear" placeholder="Start Year (optional)">
-            </div>
+                <div class="form-group">
+                    <label for="startYear">Start Year (optional):</label>
+                    <input type="text" class="form-control" id="startYear" aria-describedby="startYear" placeholder="Start Year (optional)">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">End Year (optional):</label>
+                    <input type="text" class="form-control" id="endYear" aria-describedby="endYear" placeholder="End Year (optional)">
+                </div>
+
+                <button id="search" type="button" class="btn btn-outline-primary">Search</button>
+                <button id ="clear" type="button" class="btn btn-outline-primary">Clear Results</button>
+            </form>
         </div>
+    </div>
 
-        <div class="row">
-            <div class="form-group">
-                <label for="exampleInputEmail1">End Year (optional):</label>
-                <input type="text" class="form-control" id="endYear" aria-describedby="endYear" placeholder="End Year (optional)">
-            </div>
-        </div>
-
-        <div class="row">
-            <button id="search" type="button" class="btn btn-outline-primary">Search</button>
-            <button id ="clear" type="button" class="btn btn-outline-primary">Clear Results</button>
-        </div>
-    </form>
-</div>
-</div>
-
-<div class="card">
+    <div class="card">
         <div class="card-header bg-primary text-white">
             Top Articles
         </div>
-        <div id="articles" class="card-body">  
-            <span id="title"></span>
-            <span id="section"></span>
-            <span id="source-url"></span>
+
+        <div id="articles" class="card-body">
+            <div id="article">  
+                <span id="title"></span>
+                <span id="section"></span>
+                <span id="source-url"></span>
+            </div>
         </div>
+    </div>
+
 </div>
 
 <div class="footer">
